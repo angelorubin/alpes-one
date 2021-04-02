@@ -11,7 +11,6 @@ import car from "assets/img/car.png";
 import assistedSteering from "assets/img/assisted-steering.png";
 import accord from "assets/img/accord.png";
 import logoIbama from "assets/img/logo-ibama.png";
-
 import faceIcon from "assets/img/face-icon.png";
 import instaIcon from "assets/img/insta-icon.png";
 import twitterIcon from "assets/img/twitter-icon.png";
@@ -21,19 +20,23 @@ export default function Home() {
     <S.HomeContainer>
       <S.HeaderContainer>
         <div>
-          <div className="section-one">
-            <S.HeaderIcon src={homeIcon} alt="home-icone" />
-            <S.HeaderLink>Ir para o Portal Banzai</S.HeaderLink>
+          <div>
+            <img className="icon" src={homeIcon} alt="home-icon" />
+            <a className="link" href="/">
+              Ir para o Portal Banzai
+            </a>
           </div>
-          <div className="section-two">
-            <div className="section-one">
-              <S.HeaderIcon src={facePlaceholderIcon} alt="face-icon" />
-              <S.HeaderLink>Encontre uma concessionária</S.HeaderLink>
-            </div>
-            <div className="section-two">
-              <S.HeaderIcon src={envelopeIcon} alt="envelope-icon" />
-              <S.HeaderLink>Fale Conosco</S.HeaderLink>
-            </div>
+          <div>
+            <img className="icon" src={facePlaceholderIcon} alt="face-icon" />
+            <a className="link" href="/">
+              Encontre uma concessionária
+            </a>
+          </div>
+          <div>
+            <img className="icon" src={envelopeIcon} alt="envelope-icon" />
+            <a className="link" href="/">
+              Fale conosco
+            </a>
           </div>
         </div>
       </S.HeaderContainer>

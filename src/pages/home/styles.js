@@ -7,60 +7,55 @@ export const Container = styled.div`
   display: flex;
 `;
 
+// Home
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 100%;
+  overflow-x: scroll;
 `;
 
 // Header
-
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #eeeeee;
-  width: 100%;
-  & > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
-    min-height: 25px;
-    & .section-one {
+  min-height: 25px;
+  @media (min-width: 200px) {
+    & > div {
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      width: 90%;
     }
-    & .section-two {
-      display: flex;
-      align-items: center;
-      & .section-one {
-        display: flex;
-        align-items: center;
-        margin-right: 26px;
+      & .link {
+        display: none;
       }
-      & .section-two {
-        display: flex;
-        align-items: center;
+    }
+  }
+
+  @media (min-width: 600px) {
+    & > div{
+      display: flex;
+    }
+    & > div > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .icon {
+        margin-right: 10px;
+      }
+      & .link {
+        display: block;   
+        font-size:12px;
+        color: #707070;
+        text-decoration: none;
       }
     }
   }
 `;
 
-export const HeaderIcon = styled.img`
-  width: 60;
-  height: 17;
-  margin-right: 0.5rem;
-`;
-
-export const HeaderLink = styled(Link)`
-  width: 17;
-  height: 20;
-  font-size: 12px;
-  text-decoration: none;
-`;
-
 // Subheader
-
 export const SubHeaderContainer = styled.div`
   display: flex;
   width: 100%;
@@ -100,18 +95,16 @@ export const SubHeaderContainer = styled.div`
 `;
 
 // Banner One
-
 export const BannerContainer = styled.div`
   min-height: 400px;
-  background-size: 100%;
   background-image: url(${banner});
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #fff;
 `;
 
 // Driving Emotion
-
 export const DrivingEmotionContainer = styled.div`
   display: flex;
   width: 100%;
@@ -162,7 +155,6 @@ export const DrivingEmotionTextFooter = styled.p`
 `;
 
 // Banner Two
-
 export const BannerContainerTwo = styled.div`
   background-image: url(${bannerTwo});
   min-height: 450px;
@@ -173,7 +165,6 @@ export const BannerContainerTwo = styled.div`
 `;
 
 // Features
-
 export const FeaturesContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -208,7 +199,6 @@ export const FeaturesCardItem = styled.div`
 `;
 
 // Releases
-
 export const RealeaseContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -251,7 +241,6 @@ export const ReleaseButton = styled.button`
 `;
 
 // Social Networks
-
 export const SocialContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -338,7 +327,6 @@ export const SocialIcon = styled.div`
 `;
 
 // Footer
-
 export const FooterContainer = styled.div`
   display: flex;
   justify-content: center;
