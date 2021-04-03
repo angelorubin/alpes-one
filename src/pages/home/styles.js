@@ -1,18 +1,12 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import banner from "assets/img/banner.png";
 import bannerTwo from "assets/img/banner-two.png";
-
-export const Container = styled.div`
-  display: flex;
-`;
 
 // Home
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 100%;
   overflow-x: scroll;
 `;
 
@@ -20,36 +14,90 @@ export const HomeContainer = styled.div`
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
+  background-color: #eeeeee;
+  border: 2px dashed red;
   min-height: 25px;
-  @media (min-width: 200px) {
+  padding: 10px;
+  @media (min-width: 100px) {
     & > div {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
       width: 90%;
-    }
       & .link {
         display: none;
       }
+      & .icon-small {
+        display: none;
+      }
+      & .icon-medium {
+        display: block;
+      }
+    }
+    & > div > div {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      justify-content: space-between;
+    }
+    & > div > div ~ div {
+      display: flex;
     }
   }
 
   @media (min-width: 600px) {
-    & > div{
-      display: flex;
+    & > div {
     }
-    & > div > div {
+    & > div > div:nth-of-type(1) {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      & .icon {
-        margin-right: 10px;
+      & > div {
+        display: flex;
+        align-items: center;
+        & .icon-medium {
+          margin-right: 10px;
+          width: 20px;
+          height: 17px;
+        }
+        & .link {
+          display: block;
+          font-size: 12px;
+          color: #707070;
+          text-decoration: none;
+        }
       }
-      & .link {
-        display: block;   
-        font-size:12px;
-        color: #707070;
-        text-decoration: none;
+    }
+    & > div > div:nth-of-type(2) {
+      display: flex;
+      justify-content: flex-end;
+      & > div:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+        & .icon-medium {
+          margin-right: 10px;
+          max-width: 20px;
+          max-height: 17px;
+        }
+        & .link {
+          display: block;
+          font-size: 12px;
+          color: #707070;
+          text-decoration: none;
+          margin-right: 26px;
+        }
+      }
+      & > div:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        & .icon-medium {
+          margin-right: 10px;
+          width: 20px;
+          height: 17px;
+        }
+        & .link {
+          display: block;
+          font-size: 12px;
+          color: #707070;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -58,39 +106,28 @@ export const HeaderContainer = styled.div`
 // Subheader
 export const SubHeaderContainer = styled.div`
   display: flex;
-  width: 100%;
-  background-color: white;
   justify-content: center;
-  align-items: center;
-  min-width: 90px;
-  & > div {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
+  @media (min-width: 100px) {
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+    }
   }
-  & > div > div {
-    display: flex;
-    align-items: center;
-  }
-  & .logo {
-    width: 200px;
-    height: 51px;
-  }
-  & .central-atendimento {
-    font-size: 16px;
-    font-style: italic;
-    color: #727b7a;
-  }
-  & .central-telefone {
-    font-size: 26px;
-    font-style: italic;
-    color: #df0209;
-  }
-  & > div > div ~ div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+  @media (min-width: 600px) {
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    & > div > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 

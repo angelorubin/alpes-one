@@ -1,8 +1,13 @@
 import React from "react";
 import * as S from "pages/home/styles";
-import homeIcon from "assets/img/home-icon.png";
-import envelopeIcon from "assets/img/black-envelope.svg";
-import facePlaceholderIcon from "assets/img/face-placeholder.png";
+import home from "assets/icons/home.png";
+import home2x from "assets/icons/home@2x.png";
+import envelope from "assets/icons/envelope.png";
+import envelope2x from "assets/icons/envelope@2x.png";
+import facePlace from "assets/icons/face-place.png";
+import facePlace2x from "assets/icons/face-place@2x.png";
+import faceIcon from "assets/icons/face-place.png";
+import faceIcon2x from "assets/icons/face-place@2x.png";
 import logo from "assets/img/logo.png";
 import rightSide from "assets/img/right-side.png";
 import rear from "assets/img/rear.png";
@@ -11,9 +16,10 @@ import car from "assets/img/car.png";
 import assistedSteering from "assets/img/assisted-steering.png";
 import accord from "assets/img/accord.png";
 import logoIbama from "assets/img/logo-ibama.png";
-import faceIcon from "assets/img/face-icon.png";
-import instaIcon from "assets/img/insta-icon.png";
-import twitterIcon from "assets/img/twitter-icon.png";
+
+import insta from "assets/icons/insta.png";
+// import insta2x from "assets/icons/insta@2x.png";
+import twitter from "assets/icons/twitter.png";
 
 export default function Home() {
   return (
@@ -21,22 +27,33 @@ export default function Home() {
       <S.HeaderContainer>
         <div>
           <div>
-            <img className="icon" src={homeIcon} alt="home-icon" />
-            <a className="link" href="/">
-              Ir para o Portal Banzai
-            </a>
+            <div>
+              <img className="icon-small" src={home} alt="home-icon" />
+              <img className="icon-medium" src={home2x} alt="home-icon" />
+              <a className="link" href="/">
+                Ir para o Portal Banzai
+              </a>
+            </div>
           </div>
           <div>
-            <img className="icon" src={facePlaceholderIcon} alt="face-icon" />
-            <a className="link" href="/">
-              Encontre uma concessionária
-            </a>
-          </div>
-          <div>
-            <img className="icon" src={envelopeIcon} alt="envelope-icon" />
-            <a className="link" href="/">
-              Fale conosco
-            </a>
+            <div>
+              <img className="icon-small" src={facePlace} alt="face-icon" />
+              <img className="icon-medium" src={facePlace2x} alt="face-icon" />
+              <a className="link" href="/">
+                Encontre uma concessionária
+              </a>
+            </div>
+            <div>
+              <img className="icon-small" src={envelope} alt="envelope-icon" />
+              <img
+                className="icon-medium"
+                src={envelope2x}
+                alt="envelope-icon"
+              />
+              <a className="link" href="/">
+                Fale conosco
+              </a>
+            </div>
           </div>
         </div>
       </S.HeaderContainer>
@@ -81,7 +98,7 @@ export default function Home() {
       </S.DrivingEmotionContainer>
       <S.BannerContainerTwo />
       <S.FeaturesContainer>
-        <S.Container>
+        <div>
           <S.FeaturesCard>
             <img
               className="card-image"
@@ -118,15 +135,15 @@ export default function Home() {
               exigidos pelo consumidor: elegância, luxo e alto desempenho.
             </p>
           </S.FeaturesCard>
-        </S.Container>
+        </div>
       </S.FeaturesContainer>
       <S.RealeaseContainer>
-        <S.Container>
+        <div>
           <h1 className="title">PRONTO PARA TER UM HONDA?</h1>
           <h2 className="subtitle">
             Conheça os últimos grandes lançamentos da honda.
           </h2>
-          <S.Container>
+          <div>
             <S.ReleaseCard>
               <img src={accord} alt="accord" />
               <p>
@@ -152,18 +169,23 @@ export default function Home() {
               </p>
               <S.ReleaseButton>Conheça Mais</S.ReleaseButton>
             </S.ReleaseCard>
-          </S.Container>
-        </S.Container>
+          </div>
+        </div>
       </S.RealeaseContainer>
       <S.SocialContainer>
         <div className="container">
-          <S.Container>
+          <div>
             <S.SocialCard>
               <div className="section-one">
                 <div>
                   <img
                     className="icon-facebook-placeholder"
-                    src={facePlaceholderIcon}
+                    src={facePlace}
+                    alt="icone-facebook-placeholder"
+                  />
+                  <img
+                    className="icon-facebook-placeholder"
+                    src={facePlace2x}
                     alt="icone-facebook-placeholder"
                   />
                 </div>
@@ -179,25 +201,25 @@ export default function Home() {
                 <p className="phone">(31) 3123-1234</p>
               </div>
             </S.SocialCard>
-          </S.Container>
-          <S.Container>
+          </div>
+          <div>
             <p className="follow">SIGA A BANZAI NAS REDES SOCIAIS</p>
-          </S.Container>
-          <S.Container>
+          </div>
+          <div>
             <S.SocialIcon>
-              <img src={faceIcon} alt="facebook" />
+              <img src={facePlace} alt="facebook" />
             </S.SocialIcon>
             <S.SocialIcon>
-              <img src={instaIcon} alt="instagram" />
+              <img src={insta} alt="instagram" />
             </S.SocialIcon>
             <S.SocialIcon>
-              <img src={twitterIcon} alt="twitter" />
+              <img src={twitter} alt="twitter" />
             </S.SocialIcon>
-          </S.Container>
+          </div>
         </div>
       </S.SocialContainer>
       <S.FooterContainer>
-        <S.Container>
+        <div>
           <div className="section-one">
             <img className="logo" src={logo} alt="logo" />
           </div>
@@ -205,7 +227,7 @@ export default function Home() {
             <p className="text">Todos juntos fazem um trânsito melhor</p>
             <img className="logo-ibama" src={logoIbama} alt="logo-ibama" />
           </div>
-        </S.Container>
+        </div>
       </S.FooterContainer>
     </S.HomeContainer>
   );
