@@ -15,7 +15,6 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: #eeeeee;
-  border: 2px dashed red;
   min-height: 25px;
   padding: 10px;
   @media (min-width: 100px) {
