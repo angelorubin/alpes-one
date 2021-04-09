@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "pages/home/styles";
+import * as S from "pages/home/styled";
 import home from "assets/icons/home.png";
 import home2x from "assets/icons/home@2x.png";
 import envelope from "assets/icons/envelope.png";
@@ -16,59 +16,69 @@ import car from "assets/img/car.png";
 import assistedSteering from "assets/img/assisted-steering.png";
 import accord from "assets/img/accord.png";
 import logoIbama from "assets/img/logo-ibama.png";
-
 import insta from "assets/icons/insta.png";
 // import insta2x from "assets/icons/insta@2x.png";
 import twitter from "assets/icons/twitter.png";
+import contactPhone from "assets/icons/contact-phone.png";
+import { InputImageInside } from "components/input";
+import Header from "pages/home/header";
 
 export default function Home() {
   return (
     <S.HomeContainer>
-      <S.HeaderContainer>
-        <div>
-          <div>
-            <div>
-              <img className="icon-small" src={home} alt="home-icon" />
-              <img className="icon-medium" src={home2x} alt="home-icon" />
-              <a className="link" href="/">
-                Ir para o Portal Banzai
-              </a>
-            </div>
-          </div>
-          <div>
-            <div>
-              <img className="icon-small" src={facePlace} alt="face-icon" />
-              <img className="icon-medium" src={facePlace2x} alt="face-icon" />
-              <a className="link" href="/">
-                Encontre uma concessionária
-              </a>
-            </div>
-            <div>
-              <img className="icon-small" src={envelope} alt="envelope-icon" />
-              <img
-                className="icon-medium"
-                src={envelope2x}
-                alt="envelope-icon"
-              />
-              <a className="link" href="/">
-                Fale conosco
-              </a>
-            </div>
-          </div>
-        </div>
-      </S.HeaderContainer>
+      <Header />
       <S.SubHeaderContainer>
         <div>
           <div>
             <img className="logo" src={logo} alt="logo" />
           </div>
           <div>
-            <p className="central-atendimento">CENTRAL DE ATENDIMENTO</p>
-            <p className="central-telefone">(31) 3123-1234</p>
+            <span className="central-atendimento">CENTRAL DE ATENDIMENTO</span>
+            <span className="central-telefone">(31) 3123-1234</span>
           </div>
         </div>
       </S.SubHeaderContainer>
-      <S.BannerContainer />
+      <S.BannerContainer>
+        <div>
+          <div className="civic"></div>
+          <div className="civic-generation"></div>
+        </div>
+      </S.BannerContainer>
+      <S.ContactContainer>
+        <div className="mobile-contact-form">
+          <div>
+            <div>
+              <img src={contactPhone} alt="telefone de contato" />
+            </div>
+            <div>
+              <span className="solicitar">Solicitar um</span>
+              <span className="contato">CONTATO</span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <S.ContactForm>
+                <S.ContactInput placeholder="Nome" />
+                <S.ContactInput placeholder="E-mail" />
+                <S.ContactInput placeholder="Telefone" />
+                <S.ContactSelect>
+                  <S.ContactOption>Escolha o horário</S.ContactOption>
+                  <S.ContactOption>08:00</S.ContactOption>
+                  <S.ContactOption>09:00</S.ContactOption>
+                </S.ContactSelect>
+                <S.ContactSelect>
+                  <S.ContactOption>Escolha a unidade</S.ContactOption>
+                  <S.ContactOption>Local Um</S.ContactOption>
+                </S.ContactSelect>
+                <S.ContactButton>AGENDAR TEST DRIVE</S.ContactButton>
+              </S.ContactForm>
+            </div>
+          </div>
+        </div>
+        <div className="desktop-contact-form">
+          <p>desktop-contact-form</p>
+        </div>
+      </S.ContactContainer>
       <S.DrivingEmotionContainer>
         <div>
           <S.DrivingEmotionTitle>
